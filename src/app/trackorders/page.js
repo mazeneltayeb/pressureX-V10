@@ -4439,12 +4439,20 @@ export default function CustomerOrdersPage() {
   // إذا كان المستخدم مسجلاً ويعمل التحميل
   if (loading && customerOrders.length === 0) {
     return (
-      <Container className="py-5 text-center">
-        <Spinner animation="border" role="status">
-          <span className="visually-hidden">جاري التحميل...</span>
-        </Spinner>
-        <p className="mt-2">جاري تحميل طلباتك...</p>
-      </Container>
+      // <Container className="py-5 text-center">
+      //   <Spinner animation="border" role="status">
+      //     <span className="visually-hidden">جاري التحميل...</span>
+      //   </Spinner>
+      //   <p className="mt-2">جاري تحميل طلباتك...</p>
+      // </Container>
+
+       <div className="global-loader d-flex flex-column">
+                          {/* ✅ استخدام Spinner من Bootstrap بدلاً من CSS مخصص */}
+                          <Spinner animation="border" variant="dark" role="status">
+                            {/* <span className="visually-hidden">جاري التحميل...</span> */}
+                          </Spinner>
+                          <p className="mt-2">جاري تحميل طلباتك...</p>
+                        </div>
     );
   }
 
