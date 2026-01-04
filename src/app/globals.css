@@ -19,6 +19,7 @@
 html,
 body {
   max-width: 100vw;
+  max-height: 100vh;
   overflow-x: hidden;
 /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif !important; */
 }
@@ -170,7 +171,8 @@ footer {
 .global-loader {
   position: fixed;
   inset: 0;
-  background: rgba(255, 255, 255, 0.9);
+  /* background: rgba(255, 255, 255, 0.9); */
+  background: var(--mainBackground);
   display: flex;
   justify-content: center;
   align-items: center;

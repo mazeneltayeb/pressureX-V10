@@ -75,9 +75,8 @@ const { t, lang } = useTranslate(null);
               }}>
           {categories.map((category) => (
             <div className="col-md-2   mb-4" key={category.id} 
-            style={{  
-                      minWidth:"225px",
-                      maxWidth:"250px",
+            style={{  maxWidth:"50%",
+                   
                       display: "flex",
                       justifyContent: "center",
                       alignItems: "center", 

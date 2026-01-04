@@ -145,15 +145,15 @@ const ProductCategories = () => {
         }}
         className="text-center m-0 fw-bolder">{t('categoriesH1')}</h2>
         <p className="text-center text-secondary">{t('categoriesP')}</p>
-        <div className="row">
+        <div className="row" style={{minWidth:"100%"}}>
           {categories.map((category) => (
-            <div className="col-md-3 mb-4" key={category.id}>
+            <div className="col-md-3 mb-4" key={category.id} style={{maxWidth:"50%"}}>
               <Card className="article-card shadow-sm border-0 h-100">
                 <Card.Img
                   variant="top"
                   src={category.image.src}
                   alt={category.title}
-                  style={{ height: "225px", objectFit: "contain" }}
+                  style={{ height: "150px", objectFit: "contain" }}
                   onError={(e) => {
                     e.target.onerror = null;
                     e.target.src = "https://via.placeholder.com/300x180";

@@ -239,10 +239,17 @@ export default function ProductPage() {
 };
   if (loading || loadingAuth) {
     return (
-      <Container className="text-center py-5">
-        <Spinner animation="border" variant="primary" />
-        <p className="mt-2">جاري تحميل المنتج...</p>
-      </Container>
+      // <Container className="text-center py-5">
+      //   <Spinner animation="border" variant="primary" />
+      //   <p className="mt-2">جاري تحميل المنتج...</p>
+      // </Container>
+        <div className="global-loader d-flex flex-column">
+                         {/* ✅ استخدام Spinner من Bootstrap بدلاً من CSS مخصص */}
+                         <Spinner animation="border" variant="dark" role="status">
+                           {/* <span className="visually-hidden">جاري التحميل...</span> */}
+                         </Spinner>
+                     <p className="mt-2">جاري تحميل المنتج...</p>
+                       </div>
     );
   }
 
@@ -272,11 +279,11 @@ export default function ProductPage() {
       )}
 
       {/* رسالة ترحيب للمستخدمين المسجلين */}
-      {user && (
-        <Alert variant="success" className="text-center mb-4">
+      {/* {user && (
+        <Alert variant="success" className="text-center mb-4 ">
           <strong>🎉 أهلاً بعودتك!</strong> يمكنك الآن رؤية الأسعار وإضافة المنتجات إلى السلة
         </Alert>
-      )}
+      )} */}
 
       <Row>
         <Col md={6}>

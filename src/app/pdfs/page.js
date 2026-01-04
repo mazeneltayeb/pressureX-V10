@@ -469,7 +469,7 @@ import {
 import { useRouter } from "next/navigation";
 import { useAuth } from '@/contexts/AuthContext';
 import { FaFilePdf, FaDownload, FaEye, FaSignInAlt, FaUserPlus } from "react-icons/fa";
-
+import "../globals.css";
 export default function PDFsPage() {
   const router = useRouter();
   const [pdfs, setPdfs] = useState([]);
@@ -688,12 +688,21 @@ export default function PDFsPage() {
   // ========== شاشة التحميل ==========
   if (authLoading || (loading && isAuthenticated)) {
     return (
-      <Container className="py-5 text-center">
-        <Spinner animation="border" variant="primary" />
-        <p className="mt-3">
+      // <Container className="py-5 text-center" style={{height:"100vh"}}>
+      //   <Spinner animation="border" variant="primary"/>
+      //   <p className="mt-3">
+      //     {authLoading ? "جارٍ التحقق من الصلاحيات..." : "جارٍ تحميل الملفات..."}
+      //   </p>
+      // </Container>
+          <div className="global-loader d-flex flex-column">
+              {/* ✅ استخدام Spinner من Bootstrap بدلاً من CSS مخصص */}
+              <Spinner animation="border" variant="dark" role="status">
+                {/* <span className="visually-hidden">جاري التحميل...</span> */}
+              </Spinner>
+               <p className="mt-3">
           {authLoading ? "جارٍ التحقق من الصلاحيات..." : "جارٍ تحميل الملفات..."}
-        </p>
-      </Container>
+         </p>
+            </div>
     );
   }
 

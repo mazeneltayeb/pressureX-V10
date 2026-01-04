@@ -44,9 +44,9 @@ export default function ClientLayout({ children }) {
 
   if (loading) {
     return (
-      <div className="global-loader">
+      <div className="global-loader d-flex flex-column">
         {/* ✅ استخدام Spinner من Bootstrap بدلاً من CSS مخصص */}
-        <Spinner animation="border" variant="primary" role="status">
+        <Spinner animation="border" variant="dark" role="status">
           <span className="visually-hidden">جاري التحميل...</span>
         </Spinner>
         <p className="mt-2">جاري التحميل...</p>

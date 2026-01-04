@@ -1698,10 +1698,17 @@ export default function StorePage() {
   // 🔥 7. عرض حالة التحميل
   if (loading && products.length === 0) {
     return (
-      <Container className="py-5 text-center">
-        <Spinner animation="border" variant="success" />
-        <p className="mt-3">جارٍ تحميل المتجر...</p>
-      </Container>
+      // <Container className="py-5 text-center">
+      //   <Spinner animation="border" variant="success" />
+      //   <p className="mt-3">جارٍ تحميل المتجر...</p>
+      // </Container>
+        <div className="global-loader d-flex flex-column">
+                    {/* ✅ استخدام Spinner من Bootstrap بدلاً من CSS مخصص */}
+                    <Spinner animation="border" variant="dark" role="status">
+                      {/* <span className="visually-hidden">جاري التحميل...</span> */}
+                    </Spinner>
+                  <p className="mt-3">جارٍ تحميل المتجر...</p>
+                  </div>
     );
   }
 
