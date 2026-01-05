@@ -12,7 +12,7 @@ const siteTranslations = {
     // Navigation
     home: "الرئيسية",
     about: "من نحن",
-    contact: "اتصل بنا",
+    contact: "تواصل معنا",
     Article:"المقالات",
     Lists:"كسوفات",
     Store:"متجر",
@@ -127,7 +127,7 @@ const siteTranslations = {
      // Navigation
     home: "Home",
     about: "About Us",
-    contact: "Contact",
+    contact: "Contact Us",
     Article:"Articles",
     Lists:"Lists",
     Store:"Store",

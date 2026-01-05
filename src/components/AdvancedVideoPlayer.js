@@ -397,7 +397,7 @@ const AdvancedVideoPlayer = ({
        >
           {/* اقرأ المزيد */}
           
-          {t('button_more')}
+          {t('contact')}
         </Button>
         
     

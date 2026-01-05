@@ -75,7 +75,7 @@ const { t, lang } = useTranslate(null);
               }}>
           {categories.map((category) => (
             <div className="col-md-2   mb-4" key={category.id} 
-            style={{  maxWidth:"50%",
+            style={{  maxWidth:"33.333%",
                    
                       display: "flex",
                       justifyContent: "center",
@@ -83,8 +83,8 @@ const { t, lang } = useTranslate(null);
                        }}>
               <Card className="numbers-card shadow border-0 " 
                      style={{ 
-                    height: "127px",
-                     width:"127px",
+                    maxHeight: "127px",
+                     maxWidth:"127px",
                       objectFit: "contain",
                       borderRadius:"50%",
                       display:"flex",

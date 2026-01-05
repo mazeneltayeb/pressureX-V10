@@ -1,16 +1,3 @@
-import StorePage from "./Products";
-
-export const metadata = {
-  title: "قطع غيار سيارات أصلية | منتجات جملة وقطاعي في مصر",
-description:"تسوق قطع غيار سيارات أصلية في مصر بأسعار مميزة. منتجات جملة وقطاعي لجميع الموديلات مع شحن سريع لكل المحافظات",
-};
-
-export default function Page() {
-  return <StorePage />;
-}
-
-
-
 // //Very Good
 // //app/store/page.js
 // "use client";
@@ -3345,7 +3332,16 @@ export default function Page() {
 //   );
 // }
 
+import StorePage from "./Products";
 
+export const metadata = {
+  title: "قطع غيار سيارات أصلية | منتجات جملة وقطاعي في مصر",
+description:"تسوق قطع غيار سيارات أصلية في مصر بأسعار مميزة. منتجات جملة وقطاعي لجميع الموديلات مع شحن سريع لكل المحافظات",
+};
+
+export default function Page() {
+  return <StorePage />;
+}
 
 // "use client";
 // import React, { useEffect, useState, useMemo, useCallback } from "react";

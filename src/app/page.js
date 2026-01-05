@@ -37,7 +37,7 @@ export default function Home() {
   <ProductCategories/>
     <SwiperCustomers
       autoPlay={true}
-        delay={3000}
+        delay={1500}
         showPagination={true}
         showNavigation={true}
         loop={true}
@@ -48,6 +48,8 @@ export default function Home() {
 <Numbers/> */}
 <Companies/>
   {/* إعلان داخل الصفحة */}
+
+ 
   <AdSlot width="90%" height="150px" label="إعلان منتصف الصفحة" />
    
   {/* <PricesSection /> */}
