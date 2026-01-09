@@ -15,11 +15,13 @@ import 'swiper/css/bundle';
 import SwiperCustomers from "@/components/SwiperCustomers";
 import WeOffer from "@/components/WeOffer";
 import Companies from "@/components/Companies";
-
+import ImportBanner from "@/components/ImportBanner";
+import HeroBanner from "@/components/HeroBanner";
 export default function Home() {
   return (
    <main>
-  <Banner />
+     <HeroBanner  />
+  {/* <Banner /> */}
  <AdvancedVideoPlayer 
         videoPath="vedio/mainVedio.mp4"
         aspectRatio="16:9"
@@ -33,7 +35,7 @@ export default function Home() {
         showNavigation={true}
         loop={true}
       />
-
+<ImportBanner/>
   <ProductCategories/>
     <SwiperCustomers
       autoPlay={true}
